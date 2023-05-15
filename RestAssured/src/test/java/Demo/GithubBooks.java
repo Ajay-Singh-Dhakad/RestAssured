@@ -12,7 +12,7 @@ import io.restassured.response.Response;
 
 	public class GithubBooks {
 		public static String baseUrl="https://simple-books-api.glitch.me";
-		public static String accessToken="a85973bd03d29339953bf9cbaabd6fc7140c1dfc5ec96d8b30e97101b0c9f356";
+		public static String accessToken="74cde6e7dee834212f6288362255fd2bd2f157ddc88c543810150d89a83c986a";
 		public static String orderId;
 		@Test(priority = 1)
 		public void GetStatus() {
@@ -111,11 +111,11 @@ import io.restassured.response.Response;
 		    System.out.println(jsonresponse);
 
 		   }
-		@Test(priority = 6)
+		@Test(priority = 6,enabled=false)
 		public void Update_an_Order() {
 			RestAssured.baseURI=baseUrl;
 			String data2="{\r\n"
-					+ "  \"customerName\": \"Ajay\"\r\n"
+					+ "  \"customerName\": \"Ankur\"\r\n"
 					+ "}";
 		   Response  response= given()
 		    .header("Content-Type","application/json")
